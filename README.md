@@ -51,8 +51,10 @@ The necessary packages are in "analysis-code/requirements.txt".
 #### Workflow: using venv 
 Create python environment in analysis-code, i.e. with "venv" using BASH:
 > python3 -m venv analysis-code/.compton_environment
+
 To activate it type
 > source analysis-code/.compton_environment/bin/activate
+
 Use
 > which pip
 **to make sure you are using the correct environment!**
@@ -65,6 +67,7 @@ If you **add a different package** (make sure your **correct environment is acti
 > which pip
 > pip install PACKAGE_NAME
 > pip freeze > requirements.txt
+
 Thus the "requirements.txt is up-to-date, including all packages that might be used.
 
 
