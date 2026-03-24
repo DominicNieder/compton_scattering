@@ -41,3 +41,55 @@ In report/main.tex there is a line that fill access all figures from figure/ and
 
 run from commandline:
 > cd report && pdflatex main.tex
+
+
+
+## Python coding
+
+The necessary packages are in "analysis-code/requirements.txt". 
+
+#### Workflow: using venv 
+Create python environment in analysis-code, i.e. with "venv" using BASH:
+> python3 -m venv analysis-code/.compton_environment
+To activate it type
+> source analysis-code/.compton_environment/bin/activate
+Use
+> which pip
+**to make sure you are using the correct environment!**
+
+To **install all packages** for which are used:
+> which pip
+> pip install -r requirements.txt
+
+If you **add a different package** (make sure your **correct environment is active!**):
+> which pip
+> pip install PACKAGE_NAME
+> pip freeze > requirements.txt
+Thus the "requirements.txt is up-to-date, including all packages that might be used.
+
+
+#### Wrokflow: organisation
+The analysis should be carried out in main.py!
+Functions should be defined in the appropriate file! Add further files if needed. 
+Keep track of packages being used.
+
+Access functions in main.py i.e. by the following:
+```python
+# main.py
+from data_loader import load_spectrum
+from calibration import calibrate_energy
+from fitting import fit_gaussian
+from plotting import plot_spectrum
+
+# Load
+channels, counts = load_spectrum("../data/measurement1.txt")
+
+# Calibrate
+energies = calibrate_energy(channels, a=0.5, b=10)
+
+# Fit
+peak_center, peak_width = fit_gaussian(energies, counts)
+
+# Plot
+plot_spectrum(energies, counts, peak_center)
+```
