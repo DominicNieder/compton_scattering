@@ -37,7 +37,8 @@ analysis-code/.compton_environment/
 
 Depending on from which directory the "main.tex" will be compiled from, the **figures/picutres will be accessed by a different path**. 
 
-In report/main.tex there is a line that fill access all figures from figure/ and, or pictures/
+In report/main.tex there is a line that will access all figures from figure/ and, or pictures/ (line 22)
+> \graphicspath{{../figures/}{../pictures/}}
 
 run from commandline:
 > cd report && pdflatex main.tex
@@ -48,7 +49,7 @@ run from commandline:
 
 The necessary packages are in "analysis-code/requirements.txt". 
 
-#### Workflow: using venv 
+#### Workflow: using pip (venv) 
 Create python environment in analysis-code, i.e. with "venv" using BASH:
 > python3 -m venv analysis-code/.compton_environment
 
@@ -96,3 +97,14 @@ peak_center, peak_width = fit_gaussian(energies, counts)
 # Plot
 plot_spectrum(energies, counts, peak_center)
 ```
+
+
+
+## Data, Figures, Pictures, Results
+
+- The meausrements -> data/
+- plots (i.e. from analysis) go to figures/
+- photos -> pictures/
+- results from analysis -> results/
+
+Every directory contains an "orientation.txt" file. This should help to keep log, enabling concise naming of files, with descriptions.
