@@ -58,6 +58,7 @@ To activate it type
 
 Use
 > which pip
+
 **to make sure you are using the correct environment!**
 
 To **install all packages** for which are used:
