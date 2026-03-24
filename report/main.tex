@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[a4paper, width=150mm, top=25mm,
+    bindingoffset=7mm]{geometry}
+\usepackage[subpreambles=true]{standalone}
+\usepackage{biblatex}
+\addbibresource{literature.bib}
+
+%%% Tikz and drawing
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{positioning,decorations.pathmorphing,calc,math,fadings}
+\tikzfading[name=fadeoutright,left color=transparent!0,right color=transparent!100]
+\tikzfading[name=fadeoutleft,left color=transparent!100,right color=transparent!0]
+\pgfplotsset{compat=1.18, width=\textwidth}
+\usetikzlibrary{shapes,arrows,fit}
+
+% Language
+\usepackage[english]{babel}
+
+% Images and figures
+\usepackage{graphicx}
+\graphicspath{{../figures/}{../pictures/}}
+\usepackage[skip=0.333\baselineskip]{caption}
+\usepackage{ragged2e}
+\DeclareCaptionJustification{justified}{\justifying}
+\captionsetup{labelfont={bf,sf},font={small,sf,stretch=1},
+    justification=justified,labelsep=period}
+\usepackage{subcaption}
+\usepackage{float}
+
+\usepackage{setspace}
+\linespread{1}
+
+% Font
+\usepackage{lmodern}
+
+% Mathematics
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx}  % for units: \SI{662}{\kilo\eV}
+
+% Hyperlinks (load last)
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
+
+%%% END of preamble
+
+\title{\textbf{Compton Scattering}\\[5pt]
+\large FP2 Lab Report}
+\author{Dominic Nieder}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Abstract goes here.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{introduction}
+
+\input{theory}
+
+\input{experimental_setup}
+
+\input{analysis}
+
+\input{discussion}
+
+\appendix
+
+\printbibliography
+
+\end{document}
