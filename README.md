@@ -1,6 +1,8 @@
 # Compton Experiment
 
-## Preliminaries: Github settings
+## Preliminaries
+
+### Github settings
 - fist add a file named ".gitignore" this will automatically be recognised by Git, so that it ignores all files (pdf for reading, *.log, etc...) that are not required to be shared.
 Here is the content of my `.gitignore` file:
 
@@ -33,7 +35,7 @@ analysis-code/.compton_environment/
 ```
 
 
-## Report and Latex
+### Report and Latex
 
 Depending on from which directory the "main.tex" will be compiled from, the **figures/picutres will be accessed by a different path**. 
 
@@ -45,11 +47,11 @@ run from commandline:
 
 
 
-## Python coding
+### Python coding
 
 The necessary packages are in "analysis-code/requirements.txt". 
 
-#### Workflow: using pip (venv) 
+##### Workflow: using pip (venv) 
 Create python environment in analysis-code, i.e. with "venv" using BASH:
 > python3 -m venv analysis-code/.compton_environment
 
@@ -61,7 +63,7 @@ Use
 
 **to make sure you are using the correct environment!**
 
-To **install all packages** for which are used:
+To **install all packages** which are used:
 > which pip
 > pip install -r requirements.txt
 
@@ -73,7 +75,7 @@ If you **add a different package** (make sure your **correct environment is acti
 Thus the "requirements.txt is up-to-date, including all packages that might be used.
 
 
-#### Wrokflow: organisation
+##### Wrokflow: organisation
 The analysis should be carried out in main.py!
 Functions should be defined in the appropriate file! Add further files if needed. 
 Keep track of packages being used.
@@ -101,7 +103,7 @@ plot_spectrum(energies, counts, peak_center)
 
 
 
-## Data, Figures, Pictures, Results
+### Data, Figures, Pictures, Results
 
 - The meausrements -> data/
 - plots (i.e. from analysis) go to figures/
@@ -109,3 +111,25 @@ plot_spectrum(energies, counts, peak_center)
 - results from analysis -> results/
 
 Every directory contains an "orientation.txt" file. This should help to keep log, enabling concise naming of files, with descriptions.
+
+
+
+## Questions
+
+We shall come across many questions. For the preparation, in our experimental procedure should be based on questions we want to reason and to reach a goal.
+
+
+### Preparation questions
+
+Introduction text:
+- Setup and principle of operation of Scintillation Spectrometry
+- Functional principle of the devices used to take the measurements
+- Relevance of linear and logic pulses
+- Difference between organic and anorganic scintillators
+- Interaction of $\gamma$ rays and electrons with matter
+- Definition and measurement of differential and total cross sections
+
+### Experimental procedure
+
+
+### Questions for the Supervisor
