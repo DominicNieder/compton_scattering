@@ -133,3 +133,10 @@ Introduction text:
 
 
 ### Questions for the Supervisor
+
+
+## Required measurements
+
+
+### Preparation
+- Resolution of detector: $R=\Delta E/E$, with $\Delta E=FWHM$ of photo peak (for Cs$^{137}$ possible to obtain below 8%)
