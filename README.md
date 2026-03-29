@@ -9,6 +9,7 @@ Here is the content of my `.gitignore` file:
 ```gitignore
 # my literature to read (comments in .gitignore)
 reading/
+analysis-code/__pycache__
 
 # any other pdf, also from .tex
 *.pdf
