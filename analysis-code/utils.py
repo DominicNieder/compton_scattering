@@ -6,6 +6,31 @@ import os
 import json
 from datetime import datetime
 
+def open_log(target_folder:str)->dict:
+    """
+    Opens the json file. Returns Dictionary.
+    """
+    log_path = os.path.join(target_folder, "orientation.json")
+    if not os.path.exists(log_path):
+        raise FileNotFoundError(f"No orientation.json found in {target_folder}")
+
+    else:
+        with open(log_path, "r") as f:
+            index = json.load(f)
+            return index
+
+
+def post_log(target_folder, index):
+    """
+    post log to json file.
+    """
+    log_path = os.path.join(target_folder, "orientation.json")
+    if not os.path.exists(log_path):
+        raise FileNotFoundError(f"No orientation.json found in {target_folder}")
+    else:
+        with open(log_path, "w") as f:
+            json.dump(index, f, indent=2)
+    
 
 def keep_log(folder, target, description):
     """
@@ -16,22 +41,17 @@ def keep_log(folder, target, description):
     target:       the target filename to be described
     description:    the suitable description of filename
     """
-    log_path = os.path.join(folder, "orientation.json")
-
-    if os.path.exists(log_path):
-        with open(log_path, "r") as f:
-            index = json.load(f)
-    else:
-        index = {}
+    index = open_log(folder)
     
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     index[target] = {
                         "description": description,
                         "update": timestamp
                     }
-    
-    with open(log_path, "w") as f:
-        json.dump(index, f, indent=2)
+    post_log(folder, index)
+
+
+
 
 
 def describe_data(data_name, data_description):
@@ -40,47 +60,38 @@ def describe_data(data_name, data_description):
 
     description: short description of data
     """
-    log_path = os.path.join("../data", "orientation.json")
-    if os.path.exists(log_path):
-        with open(log_path, "r") as f:
-            index = json.load(f)
-    else:
-        index = {}
+    data_dir = "../data"
+    index = open_log(data_dir)
     
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     
     index[data_name] = {
                         "description": data_description,
-                        "update": timestamp
+                        "Time": timestamp
                     }
-
-    with open(log_path, "w") as f:
-        json.dump(index, f, indent=2)
+    post_log(data_dir, index)
 
 
 def read_folder(folder):
-    """
-    Prints all entries in orientation.json of the given folder.
-    """
-    log_path = os.path.join(folder, "orientation.json")
-    with open(log_path, "r") as f:
-        index = json.load(f)
-
+    index = open_log(folder)
     for filename, entry in sorted(index.items()):
-        print(f"{filename} ({entry['update']}):\n{entry['description']}\n")
+        print(f"{filename}:")
+        if isinstance(entry, dict):
+            for key, value in entry.items():
+                print(f"  {key}: {value}")
+        else:
+            print(f"  {entry}")
+        print()
 
 
 
 def read_entry(folder, target):
     """
-    prints the entry of the target.
+    Prints the entry of the target.
     """
-    log_path = os.path.join(folder, "orientation.json")
-    with open(log_path, "r") as f:
-        index = json.load(f)
+    index = open_log(folder)
     print("Target: ", target, " recordet at", index[target]["update"])
     print("description: ", index[target]["description"])
-
 
 
 if __name__ == "__main__" and False:

@@ -1,1 +1,8 @@
-{}
+{
+  "description": "This plot will help verify the energy windows.",
+  "update": "2026-03-29 23:43",
+  "window2": {
+    "1": 5420,
+    "2": 6088
+  }
+}
