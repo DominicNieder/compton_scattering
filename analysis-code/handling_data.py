@@ -12,6 +12,7 @@ def load_spectrum(filepath):
     """
     df = pd.read_csv(filepath, sep='/t', comment='#',
                      names=['counts'])
+    
     return df
 
 
