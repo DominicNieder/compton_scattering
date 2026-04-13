@@ -9,7 +9,7 @@
         "results": {}
     },
     "circut_data": {
-        "folder": "osci/",
+        "dir": "osci/",
 
         "NewFile1.csv": {
             "scinti": "NaI(Ti)",
@@ -76,11 +76,22 @@
             "scinti": "NaI(Ti)-Scintillator",
             "output": {
                 "1": "pos output tsca",
-                "4": "uni main-amp"
+                "2": "uni main-amp"
             },
             "description": "How the linear gate window time was choosen. Approx. 0.5 micro sec. after the peak of main-amp.",
             "source": "Na22"
         }
 
+    },
+
+    "spectra": {
+        "dir": "spectra/",
+        
+        "04-13-01-Na.TKA": {
+            "source": "Na", 
+            "scinti": "NaI(Ti)",
+            "MCA": "1",
+            "description": "This is a spectrum observed with the configuration with TSCA and linear gate."
+        }
     }
 }
