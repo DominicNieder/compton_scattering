@@ -3,11 +3,12 @@
         "dir path": "test_data/",
         "file name": "1-co-wed-LA5.TKA",
         "last worked": "no record",
-        "last edited": "yyyy-mm-dd HH:MM:SS",
+        "time": "yyyy-mm-dd HH:MM:SS",
         "description": "This data was recorded in the previous labs",
         "figures": {},
         "results": {}
     },
+
     "circut_data": {
         "dir": "osci/",
 
@@ -136,6 +137,7 @@
         "dir": "spectra/",
 
         "04-13-01-Na.TKA": {
+            "time": "2026-04-13 14:30:00",
             "source": "Na", 
             "scinti": "NaI(Ti)",
             "MCA": "1",

@@ -33,9 +33,9 @@ if run_test_ana:
     interactive_plot(test_name, description,x[200:],y[200:])  # open in irefox
     read_entry(dir_figures, test_name) # gives entry to the figure
 
-    entry = open_log(dir_figures)['test_figure'] # change
-    entry.setdefault('window2', {})
-    entry['window2']['1'] = 5420
-    entry['window2']['2'] = 6088
+    entry = open_log(dir_figures) # change
+    entry.setdefault('test_data', {}).setdefault('window2', {})
+    entry['test_data']['window1']['1'] = 5888
+    entry['test_data']['window1']['2'] = 6100
     post_log(dir_figures, entry)
     read_folder(dir_figures)
