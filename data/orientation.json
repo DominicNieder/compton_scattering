@@ -1,1 +1,59 @@
-{}
+{
+    "test_data": {
+        "dir path": "test_data/",
+        "file name": "1-co-wed-LA5.TKA",
+        "last worked": "no record",
+        "last edited": "yyyy-mm-dd HH:MM:SS",
+        "description": "This data was recorded in the previous labs",
+        "figures": {},
+        "results": {}
+    },
+    "circut_data": {
+        "folder": "osci/",
+        "NewFile1.csv": {
+            "output": {
+                "1": "pre-amp, NaI-Scintillator "
+            }, 
+            "description": "Common signal of NaI(Ti) Scintillator"
+        },
+        "NewFile2.csv": {
+            "output": "pre-amp, plastic-Scintillator",
+            "description": "Common signal of plastic Scintillator."
+        },
+        "NewFile3.csv": {
+            "output": {
+                "1": "pre-amp, plastic-Scintillator",
+                "2": "main-amp, uni"
+            },
+            "description": "There is a cutoff on the oscilloscope"
+        },
+        "NewFile4.csv": {
+            "output": {
+                "1": "pre-amp, plastic-Scintillator",
+                "2": "main-amp, uni"
+            },
+            "description": "There is a cutoff on the oscilloscope"
+        },
+
+        "NewFile5.csv": {
+            "output": "pre-amp, plastic-Scintillator",
+            "description": "Lost track",
+            "source": "background"
+
+        },
+
+        "NewFile6.csv": {
+            "output": "pre-amp, plastic-Scintillator",
+            "description": "Better resolution: signal time. From the signal time we can obtain the shaping time which should be on the scale of the signal time. Common signal of plastic Scintillator. Negative voltage gives negative signal.",
+            "source": "background"
+
+        },        
+        "NewFile7.csv": {
+            "output": "pre-amp, NaI(Ti)-Scintillator",
+            "description": "Better resolution: signal time. From the signal time we can obtain the shaping time which should be on the scale of the signal time. Common signal of plastic Scintillator. Negative voltage gives negative signal.",
+            "source": "background",
+            "result": "~1 micro sec."
+
+        }
+    }
+}
