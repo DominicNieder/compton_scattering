@@ -75,10 +75,58 @@
         "NewFile8.csv": {
             "scinti": "NaI(Ti)-Scintillator",
             "output": {
-                "1": "pos output tsca",
+                "1": "linear gate <- pos tsca",
                 "2": "uni main-amp"
             },
             "description": "How the linear gate window time was choosen. Approx. 0.5 micro sec. after the peak of main-amp.",
+            "source": "Na22"
+        },
+
+        "NewFile9.csv": {
+            "scinti": "plastic-Scintillator",
+            "output": {
+                "1": "linear gate <- pos tsca",
+                "2": "uni main-amp"
+            },
+            "description": "How the window of the linear gate aligns with output of main-amp, for the plastic scintillator set-up.",
+            "source": "Na22"
+        },
+
+        "NewFile10.csv": {
+            "scinti": "NaI(Ti)-Scintillator",
+            "output": {
+                "1": "linear gate / slow coincidence <- pos tsca",
+                "2": "uni main-amp"
+            },
+            "description": "How the window of the linear gate aligns with output of main-amp, for the NaI(Ti)-scintillator set-up. We could not configure this gate.",
+            "source": "Na22"
+        },
+
+        "NewFile11.csv": {
+            "scinti": "plastic-Scintillator",
+            "output": {
+                "1": "linear gate / slow coincidence <- pos tsca",
+                "2": "uni main-amp"
+            },
+            "description": "How the window of the linear gate aligns with output of main-amp, for the plastic scintillator set-up. We could not configure this gate.",
+            "source": "Na22"
+        },
+
+        "NewFile12.csv": {
+            "scinti": "plastic-Scintillator",
+            "output": {
+                "1": "linear gate / slow coincidence <- pos tsca & <- uni main-amp"
+            },
+            "description": "After temporal alignment. Displays the resulting convoluted signal from the linear gate.",
+            "source": "Na22"
+        },
+
+        "NewFile13.csv": {
+            "scinti": "NaI(Ti)-Scintillator",
+            "output": {
+                "1": "linear gate / slow coincidence <- pos tsca & <- uni main-amp"
+            },
+            "description": "After temporal alignment. Displays the resulting convoluted signal from the linear gate.",
             "source": "Na22"
         }
 
@@ -86,7 +134,7 @@
 
     "spectra": {
         "dir": "spectra/",
-        
+
         "04-13-01-Na.TKA": {
             "source": "Na", 
             "scinti": "NaI(Ti)",
