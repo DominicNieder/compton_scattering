@@ -10,50 +10,77 @@
     },
     "circut_data": {
         "folder": "osci/",
+
         "NewFile1.csv": {
+            "scinti": "NaI(Ti)",
             "output": {
-                "1": "pre-amp, NaI-Scintillator "
+                "1": "pre-amp"
             }, 
             "description": "Common signal of NaI(Ti) Scintillator"
         },
+
         "NewFile2.csv": {
-            "output": "pre-amp, plastic-Scintillator",
+            "scinti": "plastic",
+            "output": {
+                "1": "pre-amp"
+            },
             "description": "Common signal of plastic Scintillator."
         },
+
         "NewFile3.csv": {
+            "scinti": "NaI(Ti)",
             "output": {
-                "1": "pre-amp, plastic-Scintillator",
+                "1": "pre-amp",
                 "2": "main-amp, uni"
             },
             "description": "There is a cutoff on the oscilloscope"
         },
+
         "NewFile4.csv": {
+            "scinti": "NaI(Ti)",
             "output": {
-                "1": "pre-amp, plastic-Scintillator",
+                "1": "pre-amp",
                 "2": "main-amp, uni"
             },
-            "description": "There is a cutoff on the oscilloscope"
+            "description": "Common signal, no cutoff."
         },
 
         "NewFile5.csv": {
-            "output": "pre-amp, plastic-Scintillator",
+            "scinti": "-",
+            "output": {
+                "1": "-"
+            },
             "description": "Lost track",
             "source": "background"
-
         },
 
         "NewFile6.csv": {
-            "output": "pre-amp, plastic-Scintillator",
+            "scinti": "plastic",
+            "output": {
+                "1": "pre-amp, plastic-Scintillator"
+            },
             "description": "Better resolution: signal time. From the signal time we can obtain the shaping time which should be on the scale of the signal time. Common signal of plastic Scintillator. Negative voltage gives negative signal.",
             "source": "background"
-
         },        
         "NewFile7.csv": {
-            "output": "pre-amp, NaI(Ti)-Scintillator",
+            "scinti": "NaI(Ti)",
+            "output": {
+                "1": "pre-amp"
+            },
             "description": "Better resolution: signal time. From the signal time we can obtain the shaping time which should be on the scale of the signal time. Common signal of plastic Scintillator. Negative voltage gives negative signal.",
             "source": "background",
             "result": "~1 micro sec."
+        },
 
+        "NewFile8.csv": {
+            "scinti": "NaI(Ti)-Scintillator",
+            "output": {
+                "1": "pos output tsca",
+                "4": "uni main-amp"
+            },
+            "description": "How the linear gate window time was choosen. Approx. 0.5 micro sec. after the peak of main-amp.",
+            "source": "Na22"
         }
+
     }
 }
