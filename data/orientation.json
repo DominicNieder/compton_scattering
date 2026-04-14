@@ -136,12 +136,28 @@
     "spectra": {
         "dir": "spectra/",
 
-        "04-13-01-Na.TKA": {
+        "04-13-01-Na-NaI.TKA": {
             "time": "2026-04-13 14:30:00",
             "source": "Na", 
             "scinti": "NaI(Ti)",
             "MCA": "1",
             "description": "This is a spectrum observed with the configuration with TSCA and linear gate."
+        },
+
+        "04-14-01-Na-Plastic.TKA": {
+            "time": "2026-04-14 10:00:00",
+            "source": "Na", 
+            "scinti": "plastic",
+            "MCA": "2",
+            "description": "Overnight measurement. Completely responsive for all bin#. A calibration spectrum with Na22. Seek the compton edge."
+        },
+
+        "04-14-02-Na-NaI.TKA": {
+            "time": "2026-04-13 10:00:00",
+            "source": "Na", 
+            "scinti": "NaI(Ti)",
+            "MCA": "1",
+            "description": "Overnight measurement. After bin# 7300 does not respond. This is a calibration spectrum with Na22."
         }
     }
 }
