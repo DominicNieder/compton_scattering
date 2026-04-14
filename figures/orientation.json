@@ -15,5 +15,10 @@
           "created": "2026-03-29 23:53",
           "description": "This plot will help verify the energy windows. Can be deleted"
         }
+    },
+
+    "coincidences.png": {
+      "created": "2026-04-14 14:37",
+      "description": "This graph shows that the delay tiem can be varied in between 1.6-2.4 micro sec. The Linear gate seems to function like a plateau: coincidence / no coincidence. We chose to set the delay to 2.12 micro sec." 
     }
 }

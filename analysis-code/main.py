@@ -1,9 +1,9 @@
-from plotting import interactive_plot
+from plotting import interactive_plot, coincidence_delay
 from fitting import set_window
 from utils import keep_log, read_entry, read_folder, open_log, post_log
-from handling_data import load_spectrum, graph_of_spectrum
+from handling_data import load_spectrum, graph_of_spectrum, load_coincidence
 import func 
-
+import os
 
 #--------------------------------------------------
 #           Here the Analysis shall be performed
@@ -12,8 +12,8 @@ import func
 
 ### select which part of the analysis shall be performed
 
-run_test_ana = True 
-
+run_test_ana = False 
+run_coincidence = True
 
 # all directories
 dir_data = "../data"
@@ -39,3 +39,10 @@ if run_test_ana:
     entry['test_data']['window1']['2'] = 6100
     post_log(dir_figures, entry)
     read_folder(dir_figures)
+
+if run_coincidence:
+    filename= "../data/coincidence/14-04-01.csv"
+    coinci_measure= load_coincidence(filename)
+    x_delay= coinci_measure['delay'].to_numpy()
+    y_coinci = coinci_measure['coincidences'].to_numpy()
+    coincidence_delay(x_delay, y_coinci)

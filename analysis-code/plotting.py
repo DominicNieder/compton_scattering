@@ -61,6 +61,23 @@ def interactive_plot(
     keep_log(directory, name, description)
 
 
+def coincidence_delay(
+        x_delay_times,
+        y_coincidences
+):
+    """
+    plots the data acquired by the coincidence measurement.
+    """
+    directory= "../figures"
+    file_name= "coincidences.png"
+    save_file = os.path.join(directory,file_name)
+    plt.scatter(x_delay_times, y_coincidences)
+    plt.ylabel("coincidences")
+    plt.xlabel("delay time")
+    plt.savefig(save_file)
+
+
+
 if __name__ == "__name__" and True:
     test_name = "test_data"
     description = "This plot will help verify the energy windows."

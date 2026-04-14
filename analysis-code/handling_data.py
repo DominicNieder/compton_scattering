@@ -12,9 +12,21 @@ def load_spectrum(
     """
     Returns DataFrame with columns: counts
     """
-    df = pd.read_csv(filepath, sep='\t', comment='#',
-                     names=['counts'])
+    df = pd.read_csv(filepath, sep='\t', comment='#', names=['counts'])
     
+    return df
+
+def load_coincidence(
+        filepath:str
+):
+    """
+    Returns the data of coincidence measurement.
+    name: 'delay', 'coincidences'
+    """
+    df = pd.read_csv(filepath, 
+                     sep=',',
+                     names=['delay', 'coincidences']
+                    )
     return df
 
 def graph_of_spectrum(
