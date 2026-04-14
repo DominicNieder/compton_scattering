@@ -25,8 +25,3 @@ def fit_gaussian(x, y, p0=None):
     perr = np.sqrt(np.diag(pcov))
     return popt, perr
 
-
-def set_window():
-    """
-
-    """
