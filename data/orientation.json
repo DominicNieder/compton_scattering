@@ -76,7 +76,7 @@
         "NewFile8.csv": {
             "scinti": "NaI(Ti)-Scintillator",
             "output": {
-                "1": "linear gate <- pos tsca",
+                "1": "linear gate <- pos-TSCA",
                 "2": "uni main-amp"
             },
             "description": "How the linear gate window time was choosen. Approx. 0.5 micro sec. after the peak of main-amp.",
@@ -86,7 +86,7 @@
         "NewFile9.csv": {
             "scinti": "plastic-Scintillator",
             "output": {
-                "1": "linear gate <- pos tsca",
+                "1": "linear gate <- pos-TSCA",
                 "2": "uni main-amp"
             },
             "description": "How the window of the linear gate aligns with output of main-amp, for the plastic scintillator set-up.",
@@ -96,7 +96,7 @@
         "NewFile10.csv": {
             "scinti": "NaI(Ti)-Scintillator",
             "output": {
-                "1": "linear gate / slow coincidence <- pos tsca",
+                "1": "linear gate / slow coincidence <- pos-TSCA",
                 "2": "uni main-amp"
             },
             "description": "How the window of the linear gate aligns with output of main-amp, for the NaI(Ti)-scintillator set-up. We could not configure this gate.",
@@ -106,7 +106,7 @@
         "NewFile11.csv": {
             "scinti": "plastic-Scintillator",
             "output": {
-                "1": "linear gate / slow coincidence <- pos tsca",
+                "1": "linear gate / slow coincidence <- pos-TSCA",
                 "2": "uni main-amp"
             },
             "description": "How the window of the linear gate aligns with output of main-amp, for the plastic scintillator set-up. We could not configure this gate.",
@@ -116,7 +116,7 @@
         "NewFile12.csv": {
             "scinti": "plastic-Scintillator",
             "output": {
-                "1": "linear gate / slow coincidence <- pos tsca & <- uni main-amp"
+                "1": "linear gate / slow coincidence <- pos-TSCA & <- uni main-amp"
             },
             "description": "After temporal alignment. Displays the resulting convoluted signal from the linear gate.",
             "source": "Na22"
@@ -125,9 +125,30 @@
         "NewFile13.csv": {
             "scinti": "NaI(Ti)-Scintillator",
             "output": {
-                "1": "linear gate / slow coincidence <- pos tsca & <- uni main-amp"
+                "1": "linear gate / slow coincidence <- pos-TSCA & <- uni main-amp"
             },
             "description": "After temporal alignment. Displays the resulting convoluted signal from the linear gate.",
+            "source": "Na22"
+        },
+
+        "NewFile14.csv": {
+            "scinti": "plastic-, NaI(Ti)-Scintillator",
+            "output": {
+                "1": "pos TSCA plastic",
+                "2": "pos TSCA NaI(Ti)"
+            },
+            "description": "Coincidence setup. We want to set up the coincidence unit. The window is set on the Na22-511 peak. No window on plastic scinti. We observe two logical signals that from the plastic scintilator results in two composite pos-TSCA signals. NewFile15.csv argues that it comes from the tri-polar nature of the bi-polar signal from the plastic scintillator.",
+            "source": "Na22"
+        },
+
+        "NewFile15.csv": {
+            "scinti": "plastic-, NaI(Ti)-Scintillator",
+            "output": {
+                "1": "bi main-amp plastic",
+                "2": "pos-TSCA plastic",
+                "3": "pos-TSCA NaI(Ti)"
+            },
+            "description": "Coincidence setup. We want to identify the reason for the two consecutive signals from pos-TSCA plastic. This data shows it is due to the nature of the bi-polar signal of the main-amp.",
             "source": "Na22"
         }
 
@@ -158,6 +179,34 @@
             "scinti": "NaI(Ti)",
             "MCA": "1",
             "description": "Overnight measurement. After bin# 7300 does not respond. This is a calibration spectrum with Na22."
+        },
+
+        "04-14-03-Na-NaI.TKA": {
+            "time": "2026-04-13 16:30",
+            "source": "Na", 
+            "scinti": "NaI(Ti)",
+            "MCA": "1",
+            "description": "short calibration. we werent sure what to do..."
+        },
+
+        "04-14-04-Na-Plastic.TKA": {
+            "time": "2026-04-14 16:30",
+            "source": "Na", 
+            "scinti": "plastic",
+            "MCA": "2",
+            "description": "short calibration. we werent sure what to do..."
         }
+    },
+
+    "coincidence": {
+        "dir": "coincidence/",
+
+        "14-04-01.csv": {
+            "errors": {
+                "time": "1s"
+            },
+            "description": "We want to find the optimum delay between the TSCA. We count the number of coincidences over a set time. We measure time with a timer. We count the coincidences with the hex scaler."
+        }
+
     }
 }
