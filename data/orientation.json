@@ -1,15 +1,15 @@
 {
     "test_data": {
-        "dir path": "test_data/",
+        "dir": "test_data/",
         "file name": "1-co-wed-LA5.TKA",
         "last worked": "no record",
-        "time": "yyyy-mm-dd HH:MM:SS",
+        "date, time": "yyyy-mm-dd HH:MM",
         "description": "This data was recorded in the previous labs",
         "figures": {},
         "results": {}
     },
 
-    "circut_data": {
+    "circuit_data": {
         "dir": "osci/",
 
         "NewFile1.csv": {
@@ -21,7 +21,7 @@
         },
 
         "NewFile2.csv": {
-            "scinti": "plastic",
+            "scinti": "Plastic",
             "output": {
                 "1": "pre-amp"
             },
@@ -56,7 +56,7 @@
         },
 
         "NewFile6.csv": {
-            "scinti": "plastic",
+            "scinti": "Plastic",
             "output": {
                 "1": "pre-amp, plastic-Scintillator"
             },
@@ -74,7 +74,7 @@
         },
 
         "NewFile8.csv": {
-            "scinti": "NaI(Ti)-Scintillator",
+            "scinti": "NaI(Ti)",
             "output": {
                 "1": "linear gate <- pos-TSCA",
                 "2": "uni main-amp"
@@ -94,7 +94,7 @@
         },
 
         "NewFile10.csv": {
-            "scinti": "NaI(Ti)-Scintillator",
+            "scinti": "NaI(Ti)",
             "output": {
                 "1": "linear gate / slow coincidence <- pos-TSCA",
                 "2": "uni main-amp"
@@ -123,7 +123,7 @@
         },
 
         "NewFile13.csv": {
-            "scinti": "NaI(Ti)-Scintillator",
+            "scinti": "NaI(Ti)",
             "output": {
                 "1": "linear gate / slow coincidence <- pos-TSCA & <- uni main-amp"
             },
@@ -154,59 +154,99 @@
 
     },
 
-    "spectra": {
-        "dir": "spectra/",
+
+    "calibration spectra": {
+        "dir": "cali_spectra/",
 
         "04-13-01-Na-NaI.TKA": {
-            "time": "2026-04-13 14:30:00",
-            "source": "Na", 
+            "date, time": "2026-04-13 14:30",
+            "source": "Na22", 
             "scinti": "NaI(Ti)",
             "MCA": "1",
             "description": "This is a spectrum observed with the configuration with TSCA and linear gate."
         },
 
         "04-14-01-Na-Plastic.TKA": {
-            "time": "2026-04-14 10:00:00",
-            "source": "Na", 
-            "scinti": "plastic",
+            "date, time": "2026-04-14 10:00",
+            "source": "Na22", 
+            "scinti": "Plastic",
             "MCA": "2",
             "description": "Overnight measurement. Completely responsive for all bin#. A calibration spectrum with Na22. Seek the compton edge."
         },
 
         "04-14-02-Na-NaI.TKA": {
-            "time": "2026-04-13 10:00:00",
-            "source": "Na", 
+            "date, time": "2026-04-13 10:00",
+            "source": "Na22", 
             "scinti": "NaI(Ti)",
             "MCA": "1",
             "description": "Overnight measurement. After bin# 7300 does not respond. This is a calibration spectrum with Na22."
         },
 
         "04-14-03-Na-NaI.TKA": {
-            "time": "2026-04-13 16:30",
-            "source": "Na", 
+            "date, time": "2026-04-13 16:30",
+            "source": "Na22", 
             "scinti": "NaI(Ti)",
             "MCA": "1",
             "description": "short calibration. we werent sure what to do..."
         },
 
         "04-14-04-Na-Plastic.TKA": {
-            "time": "2026-04-14 16:30",
-            "source": "Na", 
-            "scinti": "plastic",
+            "date, time": "2026-04-14, 16:30",
+            "source": "Na22", 
+            "scinti": "Plastic",
             "MCA": "2",
             "description": "short calibration. we werent sure what to do..."
+        },
+
+        "14-04-01-Cs-NaI.TKA": {
+            "date, time": "2026-04-14, 16:50",
+            "scinti": "NaI(Ti)",
+            "angle": "0",
+            "T": "",
+            "description": "Full spectrum of Cs137"
+        },
+        
+        "14-04-01-Cs-Plastic.TKA": {
+            "date, time": "2026-04-14, 17:50",
+            "scinti": "Plastic",
+            "angle": "0",
+            "T": "",
+            "description": "Full spectrum of Cs137"
         }
     },
+
 
     "coincidence": {
         "dir": "coincidence/",
 
         "14-04-01.csv": {
+            "date, time": "2026-04-14, 15:00",
             "errors": {
                 "time": "1s"
             },
             "description": "We want to find the optimum delay between the TSCA. We count the number of coincidences over a set time. We measure time with a timer. We count the coincidences with the hex scaler."
         }
+    },
 
+
+    "compton":{
+        "dir": "compton_spectra/",
+        "source": "Cs137",
+
+        "14-04-01-NaI-0.TKA": {
+            "date, time": "2026-04-14, 16:50",
+            "scinti": "NaI(Ti)",
+            "angle": "0",
+            "T": "",
+            "description": ""
+        },
+        
+        "14-04-01-Plastic-0.TKA": {
+            "date, time": "2026-04-14, 17:50",
+            "scinti": "Plastic",
+            "angle": "0",
+            "T": "",
+            "description": ""
+        }
     }
 }
