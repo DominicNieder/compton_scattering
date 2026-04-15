@@ -9,7 +9,7 @@
         "results": {}
     },
 
-    "circuit_data": {
+    "osci": {
         "dir": "osci/",
 
         "NewFile1.csv": {
@@ -155,7 +155,7 @@
     },
 
 
-    "calibration spectra": {
+    "cali_spectra": {
         "dir": "cali_spectra/",
 
         "04-13-01-Na-NaI.TKA": {
@@ -199,7 +199,7 @@
         },
 
         "14-04-01-Cs-NaI.TKA": {
-            "date, time": "2026-04-14, 16:50",
+            "date, time": "2026-04-14, 17:50",
             "scinti": "NaI(Ti)",
             "angle": "0",
             "T": "",
@@ -212,6 +212,22 @@
             "angle": "0",
             "T": "",
             "description": "Full spectrum of Cs137"
+        },
+
+        "04-15-01-Na-NaI.TKA": {
+            "date, time": "2026-04-15 9:40",
+            "source": "Na22", 
+            "scinti": "NaI(Ti)",
+            "MCA": "1",
+            "description": "overnight calibration. set up, including: delay amp, linear gates"
+        },
+
+        "04-15-01-Na-Plastic.TKA": {
+            "date, time": "2026-04-15, 9:40",
+            "source": "Na22", 
+            "scinti": "Plastic",
+            "MCA": "2",
+            "description": "overnight calibration. set up, including: delay amp, linear gates"
         }
     },
 
@@ -229,11 +245,11 @@
     },
 
 
-    "compton":{
+    "compton_spectra":{
         "dir": "compton_spectra/",
         "source": "Cs137",
 
-        "14-04-01-NaI-0.TKA": {
+        "04-14-01-NaI-0.TKA": {
             "date, time": "2026-04-14, 16:50",
             "scinti": "NaI(Ti)",
             "angle": "0",
@@ -241,12 +257,28 @@
             "description": ""
         },
         
-        "14-04-01-Plastic-0.TKA": {
-            "date, time": "2026-04-14, 17:50",
+        "04-14-01-Plastic-0.TKA": {
+            "date, time": "2026-04-14, 16:50",
             "scinti": "Plastic",
             "angle": "0",
             "T": "",
             "description": ""
+        },
+
+        "04-15-01-NaI-120.TKA": {
+            "date, time": "2026-04-15, 12:00",
+            "scinti": "NaI(Ti)",
+            "angle": "120",
+            "T": "7655",
+            "description": "The computer crashed midway of the spectrum."
+        },
+        
+        "04-15-01-Plastic-120.TKA": {
+            "date, time": "2026-04-15, 12:00",
+            "scinti": "Plastic",
+            "angle": "120",
+            "T": "7655",
+            "description": "The computer crashed midway of the spectrum."
         }
     }
 }
