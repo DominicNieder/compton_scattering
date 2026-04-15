@@ -77,6 +77,40 @@ def coincidence_delay(
     plt.savefig(save_file)
 
 
+def interactive_spectra(df, name, description, x_col='bin', label_col='filename'):
+    """
+    Plots all spectra in a combined DataFrame as separate traces.
+    Each trace can be toggled on/off interactively.
+    ---
+    df:         combined DataFrame from load_all_spectra
+    name:       output filename (no extension)
+    description: log entry
+    x_col:      column to use as x-axis (e.g. 'bin' or 'energy')
+    label_col:  column used to label each trace (e.g. 'filename' or 'angle')
+    """
+    directory = "../figures"
+    save_file = os.path.join(directory, f"{name}.html")
+
+    fig = go.Figure()
+
+    for label, group in df.groupby(label_col):
+        fig.add_trace(go.Scatter(
+            x=group[x_col].to_numpy(),
+            y=group['counts'].to_numpy(),
+            mode='lines',
+            name=label
+        ))
+
+    fig.update_layout(
+        xaxis_title=x_col,
+        yaxis_title="Counts",
+        legend=dict(itemclick="toggle", itemdoubleclick="toggleothers")
+    )
+
+    fig.write_html(save_file)
+    keep_log(directory, name, description)
+
+
 
 if __name__ == "__name__" and True:
     test_name = "test_data"
