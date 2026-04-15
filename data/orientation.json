@@ -254,7 +254,7 @@
             "scinti": "NaI(Ti)",
             "angle": "0",
             "T": "",
-            "description": ""
+            "description": "a short measurement on tuesday"
         },
         
         "04-14-01-Plastic-0.TKA": {
@@ -262,7 +262,7 @@
             "scinti": "Plastic",
             "angle": "0",
             "T": "",
-            "description": ""
+            "description": "a short measurement on tuesday"
         },
 
         "04-15-01-NaI-120.TKA": {
@@ -279,6 +279,54 @@
             "angle": "120",
             "T": "7655",
             "description": "The computer crashed midway of the spectrum."
+        },
+
+        "04-15-02-NaI-90.TKA": {
+            "date, time": "2026-04-15, 14:00",
+            "scinti": "NaI(Ti)",
+            "angle": "90",
+            "T": "-",
+            "description": ""
+        },
+        
+        "04-15-02-Plastic-90.TKA": {
+            "date, time": "2026-04-15, 14:00",
+            "scinti": "Plastic",
+            "angle": "90",
+            "T": "-",
+            "description": ""
+        },
+
+        "04-15-03-NaI-60.TKA": {
+            "date, time": "2026-04-15, 16:00",
+            "scinti": "NaI(Ti)",
+            "angle": "60",
+            "T": "7239",
+            "description": ""
+        },
+        
+        "04-15-03-Plastic-60.TKA": {
+            "date, time": "2026-04-15, 16:00",
+            "scinti": "Plastic",
+            "angle": "60",
+            "T": "7239",
+            "description": ""
+        },
+
+        "04-15-04-NaI-45.TKA": {
+            "date, time": "2026-04-15, 18:00",
+            "scinti": "NaI(Ti)",
+            "angle": "45",
+            "T": "7231",
+            "description": ""
+        },
+        
+        "04-15-04-Plastic-45.TKA": {
+            "date, time": "2026-04-15, 18:00",
+            "scinti": "Plastic",
+            "angle": "45",
+            "T": "7237",
+            "description": ""
         }
     }
 }
