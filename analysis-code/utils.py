@@ -94,16 +94,40 @@ def read_entry(folder, target):
     print("description: ", index[target]["description"])
 
 
-if __name__ == "__main__" and False:
-    results_dir = "../results"
-    test_target = "test result1" 
-    test_mu, test_dmu = (6.5, 0.5) 
-    test_result = f"mu={test_mu:.1f}+-{test_dmu:.1f}keV\nThis is a very long message because we have alot to say  and there were a couple of details that need to be mentioned and so when we see a slight shift in the continum of space time we can take this too into consideration so that we can all be very happy."
-    keep_log(results_dir, test_target, test_result)
+def return_scinti(data_dir, filename):
+    """
+    # Which scintilator?
+    returns the scintilator used for the file (data_dir/filename)
+    data_dir : index key
+    filename : index key of data_dir
+    """
+    directory= "../data"
+    index= open_log(directory)
+    return index.get(data_dir, {}).get(filename, {}).get("scinti", "unknown")
 
 
-if __name__ == "__main__" and False:
-    results_dir = "../results"
-    test_target = "test result"
-    read_folder(results_dir)
-    #read_entry(results_dir, test_target)
+def return_TOR(data_dir, filename):
+    """
+    # Time of recording
+    returns the date, time
+    data_dir : index key
+    filename : index key of data_dir
+    """
+    directory= "../data"
+    index= open_log(directory)
+    return index.get(data_dir, {}).get(filename, {}).get("date, time", "unknown")
+
+def return_angle(data_dir, filename):
+    """
+    # measurement angle 
+    returns the angle
+    data_dir : index key
+    filename : index key of data_dir
+    """
+    directory= "../data"
+    index= open_log(directory)
+    return index.get(data_dir, {}).get(filename, {}).get("angle", "unknown")
+
+
+if __name__ == "__main__" and True:
+    print(return_TOR("cali_spectra", "04-15-01-Na-NaI.TKA"))
