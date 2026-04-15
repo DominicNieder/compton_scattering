@@ -198,16 +198,18 @@
             "description": "short calibration. we werent sure what to do..."
         },
 
-        "14-04-01-Cs-NaI.TKA": {
+        "04-14-01-Cs-NaI.TKA": {
             "date, time": "2026-04-14, 17:50",
+            "source": "Cs137",
             "scinti": "NaI(Ti)",
             "angle": "0",
             "T": "",
             "description": "Full spectrum of Cs137"
         },
         
-        "14-04-01-Cs-Plastic.TKA": {
+        "04-14-01-Cs-Plastic.TKA": {
             "date, time": "2026-04-14, 17:50",
+            "source": "Cs137",
             "scinti": "Plastic",
             "angle": "0",
             "T": "",
