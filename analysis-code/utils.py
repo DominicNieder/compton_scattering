@@ -115,6 +115,7 @@ def return_TOR(data_dir, filename):
     """
     directory= "../data"
     index= open_log(directory)
+    print(index[data_dir][filename])
     return index.get(data_dir, {}).get(filename, {}).get("date, time", "unknown")
 
 def return_angle(data_dir, filename):
