@@ -17,8 +17,8 @@
     }
   },
   "coincidences.png": {
-    "update": "2026-04-14 14:37",
-    "description": "This graph shows that the delay tiem can be varied in between 1.6-2.4 micro sec. The Linear gate seems to function like a plateau: coincidence / no coincidence. We chose to set the delay to 2.12 micro sec."
+    "description": "This graph shows that the delay time can be varied in between 1.6-2.4 micro sec. The Linear gate seems to function like a plateau: coincidence / no coincidence. We chose to set the delay to 2.12 micro sec.",
+    "update": "2026-04-17 00:31"
   },
   "cali_plastic_scinti": {
     "description": "compare the calibration spectra, select windows, focus on data obtained on 04-15",
