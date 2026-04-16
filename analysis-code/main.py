@@ -22,7 +22,7 @@ run_spec_calibration= True
 
 
 
-# all directories
+# all directories       
 dir_data = "../data"
 dir_figures = "../figures"
 dir_pictures = "../pictures"

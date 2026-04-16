@@ -345,6 +345,22 @@
             "angle": "45",
             "T": "7237",
             "description": "plastic scintillator at 0°!"
+        },
+
+        "04-16-01-NaI-105.TKA": {
+            "date, time": "2026-04-15, 18:00",
+            "scinti": "NaI(Ti)",
+            "angle": "105",
+            "T": "5245",
+            "description": "plastic scintillator at 0°!"
+        },
+        
+        "04-16-01-Plastic-105.TKA": {
+            "date, time": "2026-04-15, 18:00",
+            "scinti": "Plastic",
+            "angle": "105",
+            "T": "5245",
+            "description": "plastic scintillator at 0°!"
         }
     }
 }
