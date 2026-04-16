@@ -175,7 +175,7 @@
         },
 
         "04-14-02-Na-NaI.TKA": {
-            "date, time": "2026-04-13 10:00",
+            "date, time": "2026-04-14 10:00",
             "source": "Na22", 
             "scinti": "NaI(Ti)",
             "MCA": "1",
@@ -183,7 +183,7 @@
         },
 
         "04-14-03-Na-NaI.TKA": {
-            "date, time": "2026-04-13 16:30",
+            "date, time": "2026-04-14 16:30",
             "source": "Na22", 
             "scinti": "NaI(Ti)",
             "MCA": "1",
@@ -272,7 +272,7 @@
             "scinti": "NaI(Ti)",
             "angle": "0",
             "T": "",
-            "description": "a short measurement on tuesday"
+            "description": "a short measurement on tuesday."
         },
         
         "04-14-01-Plastic-0.TKA": {
@@ -288,7 +288,7 @@
             "scinti": "NaI(Ti)",
             "angle": "120",
             "T": "7655",
-            "description": "The computer crashed midway of the spectrum."
+            "description": "plastic scintillator at 0°! The computer crashed midway of the spectrum."
         },
         
         "04-15-01-Plastic-120.TKA": {
@@ -296,7 +296,7 @@
             "scinti": "Plastic",
             "angle": "120",
             "T": "7655",
-            "description": "The computer crashed midway of the spectrum."
+            "description": "plastic scintillator at 0°! The computer crashed midway of the spectrum."
         },
 
         "04-15-02-NaI-90.TKA": {
@@ -304,7 +304,7 @@
             "scinti": "NaI(Ti)",
             "angle": "90",
             "T": "-",
-            "description": ""
+            "description": "plastic scintillator at 0°!"
         },
         
         "04-15-02-Plastic-90.TKA": {
@@ -312,7 +312,7 @@
             "scinti": "Plastic",
             "angle": "90",
             "T": "-",
-            "description": ""
+            "description": "plastic scintillator at 0°!"
         },
 
         "04-15-03-NaI-60.TKA": {
@@ -320,7 +320,7 @@
             "scinti": "NaI(Ti)",
             "angle": "60",
             "T": "7239",
-            "description": ""
+            "description": "plastic scintillator at 0°!"
         },
         
         "04-15-03-Plastic-60.TKA": {
@@ -328,7 +328,7 @@
             "scinti": "Plastic",
             "angle": "60",
             "T": "7239",
-            "description": ""
+            "description": "plastic scintillator at 0°!"
         },
 
         "04-15-04-NaI-45.TKA": {
@@ -336,7 +336,7 @@
             "scinti": "NaI(Ti)",
             "angle": "45",
             "T": "7231",
-            "description": ""
+            "description": "plastic scintillator at 0°!"
         },
         
         "04-15-04-Plastic-45.TKA": {
@@ -344,7 +344,7 @@
             "scinti": "Plastic",
             "angle": "45",
             "T": "7237",
-            "description": ""
+            "description": "plastic scintillator at 0°!"
         }
     }
 }
