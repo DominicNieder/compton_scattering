@@ -263,7 +263,7 @@
     },
 
 
-    "compton_spectra":{
+    "compton_spectra": {
         "dir": "compton_spectra/",
         "source": "Cs137",
 
@@ -296,7 +296,7 @@
             "scinti": "Plastic",
             "angle": "120",
             "T": "7655",
-            "description": "mistagke: plastic scintillator at 0°! The computer crashed midway of the spectrum."
+            "description": "mistake: plastic scintillator at 0°! The computer crashed midway of the spectrum."
         },
 
         "04-15-02-NaI-90.TKA": {
@@ -304,7 +304,7 @@
             "scinti": "NaI(Ti)",
             "angle": "90",
             "T": "-",
-            "description": "mistagke: plastic scintillator at 0°!"
+            "description": "mistake: plastic scintillator at 0°!"
         },
         
         "04-15-02-Plastic-90.TKA": {
@@ -312,7 +312,7 @@
             "scinti": "Plastic",
             "angle": "90",
             "T": "-",
-            "description": "mistagke: plastic scintillator at 0°!"
+            "description": "mistake: plastic scintillator at 0°!"
         },
 
         "04-15-03-NaI-60.TKA": {
@@ -320,7 +320,7 @@
             "scinti": "NaI(Ti)",
             "angle": "60",
             "T": "7239",
-            "description": "mistagke: plastic scintillator at 0°!"
+            "description": "mistake: plastic scintillator at 0°!"
         },
         
         "04-15-03-Plastic-60.TKA": {
@@ -328,7 +328,7 @@
             "scinti": "Plastic",
             "angle": "60",
             "T": "7239",
-            "description": "mistagke: plastic scintillator at 0°!"
+            "description": "mistake: plastic scintillator at 0°!"
         },
 
         "04-15-04-NaI-45.TKA": {
@@ -336,7 +336,7 @@
             "scinti": "NaI(Ti)",
             "angle": "45",
             "T": "7231",
-            "description": "mistagke: plastic scintillator at 0°!"
+            "description": "mistake: plastic scintillator at 0°!"
         },
         
         "04-15-04-Plastic-45.TKA": {
@@ -344,7 +344,7 @@
             "scinti": "Plastic",
             "angle": "45",
             "T": "7237",
-            "description": "mistagke: plastic scintillator at 0°!"
+            "description": "mistake: plastic scintillator at 0°!"
         },
 
         "04-16-01-NaI-105.TKA": {
@@ -352,7 +352,7 @@
             "scinti": "NaI(Ti)",
             "angle": "105",
             "T": "5245",
-            "description": "mistagke: plastic scintillator at 0°!"
+            "description": "mistake: plastic scintillator at 0°! A short"
         },
         
         "04-16-01-Plastic-105.TKA": {
@@ -360,7 +360,39 @@
             "scinti": "Plastic",
             "angle": "105",
             "T": "5245",
-            "description": "mistagke: plastic scintillator at 0°!"
+            "description": "mistake: plastic scintillator at 0°!"
+        },
+
+        "04-16-02-NaI-120.TKA": {
+            "date, time": "2026-04-16, 01:30",
+            "scinti": "NaI(Ti)",
+            "angle": "-120",
+            "T": "2700",
+            "description": "mistake: Forgot to increase timing window from 2700!, NaI at 120, plastic at 60"
+        },
+        
+        "04-16-02-Plastic-60.TKA": {
+            "date, time": "2026-04-16, 01:30",
+            "scinti": "Plastic",
+            "angle": "-120",
+            "T": "6494",
+            "description": "mistake:Forgot to increase timing window of NaI!, NaI at 120, plastic at 60"
+        },
+
+        "04-16-03-NaI-90.TKA": {
+            "date, time": "2026-04-16, 03:00",
+            "scinti": "NaI(Ti)",
+            "angle": "-90",
+            "T": "6163.59",
+            "description": "NaI at 90, plastic at 45"
+        },
+
+        "04-16-03-Plastic-45.TKA": {
+            "date, time": "2026-04-16, 03:00",
+            "scinti": "Plastic",
+            "angle": "-90",
+            "T": "6165.94",
+            "description": "NaI at 90, plastic at 45"
         }
     }
 }
