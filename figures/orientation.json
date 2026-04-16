@@ -22,10 +22,10 @@
   },
   "cali_plastic_scinti": {
     "description": "compare the calibration spectra, select windows, focus on data obtained on 04-15",
-    "update": "2026-04-15 18:23"
+    "update": "2026-04-16 10:58"
   },
   "cali_NaI_scinti": {
     "description": "compare the calibration spectra, select windows, focus on data obtained on 04-15",
-    "update": "2026-04-15 18:23"
+    "update": "2026-04-16 10:58"
   }
 }
