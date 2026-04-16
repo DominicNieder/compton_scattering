@@ -230,6 +230,22 @@
             "scinti": "Plastic",
             "MCA": "2",
             "description": "overnight calibration. set up, including: delay amp, linear gates"
+        },
+
+        "04-16-01-bg-NaI.TKA": {
+            "date, time": "2026-04-16 9:40",
+            "source": "background", 
+            "scinti": "NaI(Ti)",
+            "MCA": "1",
+            "description": "overnight calibration. set up, including: delay amp, linear gates. Not coincidenc!"
+        },
+
+        "04-16-01-bg-Plastic.TKA": {
+            "date, time": "2026-04-16, 9:40",
+            "source": "background", 
+            "scinti": "Plastic",
+            "MCA": "2",
+            "description": "overnight background calibration. set up, including: delay amp, linear gatesNot coincidenc!"
         }
     },
 
