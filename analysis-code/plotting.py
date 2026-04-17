@@ -212,12 +212,12 @@ def interactive_spectra(df, name, description, y_col='counts', x_col='bin', labe
             y=group[y_col].to_numpy(),
             mode='markers',
             name=trace_name,
-            error_y=dict(
-                array=np.sqrt(group[y_col].to_numpy()),
-                visible=True,
-                thickness=1.5,
-                width=3,
-            )
+            # error_y=dict(
+            #     array=np.sqrt(group[y_col].to_numpy()),
+            #     visible=True,
+            #     thickness=1.5,
+            #     width=3,
+            # ) 
         ))
 
     fig.update_layout(
@@ -261,6 +261,40 @@ def interactive_calibration(calibration_dataframe):
         y_col= "rate",
         label_col=["time_of_recording", "source"]
     )
+
+def plot_rate_vs_angle(df):
+    df_plastic = df[df['scintillator'] == "Plastic"].copy()
+    df_NaI     = df[df['scintillator'] == "NaI(Ti)"].copy()
+
+    plastic_grouped = df_plastic.groupby('angle')['rate'].sum()
+    NaI_grouped     = df_NaI.groupby('angle')['rate'].sum()
+    angles_plastic  = plastic_grouped.index.to_numpy()
+    rates_plastic   = plastic_grouped.to_numpy()
+
+    angles_NaI      = NaI_grouped.index.to_numpy()
+    rates_NaI       = NaI_grouped.to_numpy()
+    
+    angle_rate_name = "angle_vs_rate_includingFriday_data_corrected_time0degree.png" 
+    fig, axs = init_plot(
+        x_label=    "angle (deg)", 
+        y_label=    "rate (1/s)", 
+        nrows=      2
+        )
+    add_dataScatter(
+                    axs[0], 
+                    angles_NaI,
+                    rates_NaI,
+                    error=np.sqrt(rates_NaI),
+                    label="NaI"
+                    )
+    add_dataScatter(axs[1], 
+                    angles_plastic, 
+                    rates_plastic, 
+                    error=np.sqrt(rates_plastic), label="Plastic"
+                    )
+
+    angle_rate_log= "Corrected time for theta=105° and theta_plastic=0°. we want to see what how the rates are dependant on the angles -> weekend measurement! Top is NaI, bottom is plastic!"
+    save_figure(fig, angle_rate_name, angle_rate_log)
 
 
 if __name__ == "__name__" and True:

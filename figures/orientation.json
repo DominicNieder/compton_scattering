@@ -22,22 +22,34 @@
   },
   "cali_plastic_scinti": {
     "description": "including errorbars. concidering rates. compare the calibration spectra, select windows, focus on data obtained on 04-16",
-    "update": "2026-04-17 14:59"
+    "update": "2026-04-17 18:03"
   },
   "cali_NaI_scinti": {
     "description": "including errorbars. considering rates. compare the calibration spectra, select windows, focus on data obtained on 04-16",
-    "update": "2026-04-17 14:59"
+    "update": "2026-04-17 18:03"
   },
   "compton_rate_spec_plastic": {
-    "description": "contains all measurements from compton. plastic scintillator.",
-    "update": "2026-04-17 14:59"
+    "description": "contains all measurements from compton. plastic scintillator. Errorbars seem to make the plots laggy.",
+    "update": "2026-04-17 18:03"
   },
   "compton_rate_spec_NaI": {
-    "description": "contains all measurements from compton. NaI(Ti) scintillator.",
-    "update": "2026-04-17 14:59"
+    "description": "contains all measurements from compton. NaI(Ti) scintillator.Errorbars seem to make the plots laggy.",
+    "update": "2026-04-17 18:03"
   },
   "angle_vs_rate.png": {
     "description": "we want to see what how the rates are dependant on the angles -> weekend measurement! Top is NaI, bottom is plastic!",
     "update": "2026-04-17 17:15"
+  },
+  "angle_vs_rate_corrected_times_at105.png": {
+    "description": "we want to see what how the rates are dependant on the angles -> weekend measurement! Top is NaI, bottom is plastic!",
+    "update": "2026-04-17 17:23"
+  },
+  "angle_vs_rate_includingFriday_data.png": {
+    "description": "we want to see what how the rates are dependant on the angles -> weekend measurement! Top is NaI, bottom is plastic!",
+    "update": "2026-04-17 17:36"
+  },
+  "angle_vs_rate_includingFriday_data_corrected_time0degree.png": {
+    "description": "Corrected time for theta=105\u00b0 and theta_plastic=0\u00b0. we want to see what how the rates are dependant on the angles -> weekend measurement! Top is NaI, bottom is plastic!",
+    "update": "2026-04-17 17:44"
   }
 }
