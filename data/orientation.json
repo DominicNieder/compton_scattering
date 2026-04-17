@@ -246,6 +246,22 @@
             "scinti": "Plastic",
             "MCA": "2",
             "description": "overnight background calibration. set up, including: delay amp, linear gatesNot coincidenc!"
+        },
+
+        "04-17-01-Na-NaI.TKA": {
+            "date, time": "2026-04-17, 14:40",
+            "source": "Na22", 
+            "scinti": "NaI(Ti)",
+            "MCA": "1",
+            "description": "The spectra are a result of the coincidence setup. with Na22 in between the two scintillators."
+        },
+
+        "04-17-01-Na-Plastic.TKA": {
+            "date, time": "2026-04-17, 14:40",
+            "source": "Na22", 
+            "scinti": "Plastic",
+            "MCA": "2",
+            "description": "The spectra are a result of the coincidence setup. with Na22 in between the two scintillators."
         }
     },
 
@@ -265,134 +281,240 @@
 
     "compton_spectra": {
         "dir": "compton_spectra/",
-        "source": "Cs137",
 
         "04-14-01-NaI-0.TKA": {
             "date, time": "2026-04-14, 16:50",
             "scinti": "NaI(Ti)",
-            "angle": "0",
+            "angle": 0,
+            "source": "Cs137",
             "T": "",
             "description": "a short measurement on tuesday."
         },
         
-        "04-14-01-Plastic-0.TKA": {
+        "04-14-01-Plastitic-0.TKA": {
             "date, time": "2026-04-14, 16:50",
             "scinti": "Plastic",
-            "angle": "0",
+            "angle": 0,
             "T": "",
+            "source": "Cs137",
             "description": "a short measurement on tuesday"
         },
 
         "04-15-01-NaI-120.TKA": {
             "date, time": "2026-04-15, 12:00",
             "scinti": "NaI(Ti)",
-            "angle": "120",
-            "T": "7655",
+            "angle": 120,
+            "T": 7655,
+            "source": "Cs137",
             "description": "mistagke: plastic scintillator at 0°! The computer crashed midway of the spectrum."
         },
         
-        "04-15-01-Plastic-120.TKA": {
+        "04-15-01-Plastitic-120.TKA": {
             "date, time": "2026-04-15, 12:00",
             "scinti": "Plastic",
-            "angle": "120",
-            "T": "7655",
+            "angle": 120,
+            "T": 7655,
+            "source": "Cs137",
             "description": "mistake: plastic scintillator at 0°! The computer crashed midway of the spectrum."
         },
 
         "04-15-02-NaI-90.TKA": {
             "date, time": "2026-04-15, 14:00",
             "scinti": "NaI(Ti)",
-            "angle": "90",
-            "T": "-",
+            "angle": 90,
+            "T": "",
+            "source": "Cs137",
             "description": "mistake: plastic scintillator at 0°!"
         },
         
-        "04-15-02-Plastic-90.TKA": {
+        "04-15-02-Plastitic-90.TKA": {
             "date, time": "2026-04-15, 14:00",
             "scinti": "Plastic",
-            "angle": "90",
-            "T": "-",
+            "angle": 90,
+            "T": "",
+            "source": "Cs137",
             "description": "mistake: plastic scintillator at 0°!"
         },
 
         "04-15-03-NaI-60.TKA": {
             "date, time": "2026-04-15, 16:00",
             "scinti": "NaI(Ti)",
-            "angle": "60",
-            "T": "7239",
+            "angle": 60,
+            "T": 7239,
+            "source": "Cs137",
             "description": "mistake: plastic scintillator at 0°!"
         },
         
-        "04-15-03-Plastic-60.TKA": {
+        "04-15-03-Plastitic-60.TKA": {
             "date, time": "2026-04-15, 16:00",
             "scinti": "Plastic",
-            "angle": "60",
-            "T": "7239",
+            "angle": 60,
+            "T": 7239,
+            "source": "Cs137",
             "description": "mistake: plastic scintillator at 0°!"
         },
 
         "04-15-04-NaI-45.TKA": {
             "date, time": "2026-04-15, 18:00",
             "scinti": "NaI(Ti)",
-            "angle": "45",
-            "T": "7231",
+            "angle": 45,
+            "T": 7231,
+            "source": "Cs137",
             "description": "mistake: plastic scintillator at 0°!"
         },
         
-        "04-15-04-Plastic-45.TKA": {
+        "04-15-04-Plastitic-45.TKA": {
             "date, time": "2026-04-15, 18:00",
             "scinti": "Plastic",
-            "angle": "45",
-            "T": "7237",
+            "angle": 45,
+            "T": 7237,
+            "source": "Cs137",
             "description": "mistake: plastic scintillator at 0°!"
         },
 
         "04-16-01-NaI-105.TKA": {
             "date, time": "2026-04-15, 18:00",
             "scinti": "NaI(Ti)",
-            "angle": "105",
-            "T": "5245",
-            "description": "mistake: plastic scintillator at 0°! A short"
+            "angle": 105,
+            "T": 5245,
+            "source": "Cs137",
+            "description": "mistake: plastic scintillator at 0°! A short. The index for time gave T=46s, we exchanged it with time noted in this .json! "
         },
         
-        "04-16-01-Plastic-105.TKA": {
+        "04-16-01-Plastitic-105.TKA": {
             "date, time": "2026-04-15, 18:00",
             "scinti": "Plastic",
-            "angle": "105",
-            "T": "5245",
-            "description": "mistake: plastic scintillator at 0°!"
+            "angle": 105,
+            "T": 5245,
+            "source": "Cs137",
+            "description": "mistake: plastic scintillator at 0°! The index for time gave T=59s, we exchanged it with time noted in this .json! "
         },
 
         "04-16-02-NaI-120.TKA": {
-            "date, time": "2026-04-16, 01:30",
+            "date, time": "2026-04-16, 13:30",
             "scinti": "NaI(Ti)",
-            "angle": "-120",
-            "T": "2700",
-            "description": "mistake: Forgot to increase timing window from 2700!, NaI at 120, plastic at 60"
+            "angle": -120,
+            "T": 2700,
+            "source": "Cs137",
+            "description": "mistake: Forgot to increase timing window from 2700!, NaI at -120, plastic at -60"
         },
         
-        "04-16-02-Plastic-60.TKA": {
-            "date, time": "2026-04-16, 01:30",
+        "04-16-02-Plastitic-120.TKA": {
+            "date, time": "2026-04-16, 13:30",
             "scinti": "Plastic",
-            "angle": "-120",
-            "T": "6494",
-            "description": "mistake:Forgot to increase timing window of NaI!, NaI at 120, plastic at 60"
+            "angle": -120,
+            "T": 6494,
+            "source": "Cs137",
+            "description": "mistake:Forgot to increase timing window of NaI!, NaI at -120, plastic at -60"
         },
 
         "04-16-03-NaI-90.TKA": {
-            "date, time": "2026-04-16, 03:00",
+            "date, time": "2026-04-16, 15:00",
             "scinti": "NaI(Ti)",
-            "angle": "-90",
-            "T": "6163.59",
-            "description": "NaI at 90, plastic at 45"
+            "angle": -90,
+            "T": 6163.59,
+            "source": "Cs137",
+            "description": "NaI at -90, plastic at -45"
         },
 
-        "04-16-03-Plastic-45.TKA": {
-            "date, time": "2026-04-16, 03:00",
+        "04-16-03-Plastitic-90.TKA": {
+            "date, time": "2026-04-16, 15:00",
             "scinti": "Plastic",
-            "angle": "-90",
-            "T": "6165.94",
-            "description": "NaI at 90, plastic at 45"
+            "angle": -90,
+            "T": 6165.94,
+            "source": "Cs137",
+            "description": "NaI at -90, plastic at -45"
+        },
+        
+
+        "04-16-04-NaI-60.TKA": {
+            "date, time": "2026-04-16, 15:00",
+            "scinti": "NaI(Ti)",
+            "angle": -60,
+            "T": 6760,
+            "source": "Cs137",
+            "description": "NaI at -60, plastic at -30"
+        },
+
+        "04-16-04-Plastitic-60.TKA": {
+            "date, time": "2026-04-16, 15:00",
+            "scinti": "Plastic",
+            "angle": -60,
+            "T": 6876,
+            "source": "Cs137",
+            "description": "NaI at -60, plastic at -30"
+        },
+
+        "04-17-01-NaI-0.TKA": {
+            "date, time": "2026-04-17, 10:00",
+            "scinti": "NaI(Ti)",
+            "angle": 0,
+            "T": "",
+            "source": "Cs137",
+            "description": "NaI at 0, plastic at 0"
+        },
+
+        "04-17-01-Plastitic-0.TKA": {
+            "date, time": "2026-04-17, 10:00",
+            "scinti": "Plastic",
+            "angle": 0,
+            "T": "",
+            "source": "Cs137",
+            "description": "NaI at 0, plastic at 0"
+        },
+
+        "04-17-02-NaI-15.TKA": {
+            "date, time": "2026-04-17, 10:00",
+            "scinti": "NaI(Ti)",
+            "angle": -15,
+            "T": 5769,
+            "source": "Cs137",
+            "description": "Error, put plastic at 2theta. NaI at -15, plastic at -30"
+        },
+
+        "04-17-02-Plastitic-15.TKA": {
+            "date, time": "2026-04-17, 10:00",
+            "scinti": "Plastic",
+            "angle": -15,
+            "T": 5770,
+            "source": "Cs137",
+            "description": "Error, put plastic at 2theta. NaI at -15, plastic at -30"
+        },
+
+        "04-17-03-NaI-30.TKA": {
+            "date, time": "2026-04-17, 13:00",
+            "scinti": "NaI(Ti)",
+            "angle": -30,
+            "T": 5746,
+            "source": "Cs137",
+            "description": "Error, put plastic at 2theta. NaI at -30, plastic at -15"
+        },
+
+        "04-17-03-Plastitic-30.TKA": {
+            "date, time": "2026-04-17, 13:00",
+            "scinti": "Plastic",
+            "angle": -30,
+            "T": 5745,
+            "source": "Cs137",
+            "description": "NaI at -30, plastic at -15"
+        },
+
+        "04-17-04-NaI-30.TKA": {
+            "date, time": "2026-04-17, 16:30",
+            "scinti": "NaI(Ti)",
+            "angle": 30,
+            "T": 5746,
+            "source": "Cs137",
+            "description": "Error, put plastic at 2theta. NaI at 30, plastic at 15"
+        },
+
+        "04-17-04-Plastitic-30.TKA": {
+            "date, time": "2026-04-17, 16:30",
+            "scinti": "Plastic",
+            "angle": 30,
+            "T": 5745,
+            "source": "Cs137",
+            "description": "NaI at 30, plastic at 15"
         }
     }
 }
