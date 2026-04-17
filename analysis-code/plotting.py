@@ -32,7 +32,7 @@ STYLE = {
     "font.family":      "serif"
 }
 
-def init_plot(x_label: str, y_label: str, nrows: int = 1, ncols: int = 1, size: tuple = (6, 4)):
+def init_plot(x_label: str, y_label: str ,nrows: int = 1, ncols: int = 1, size: tuple = (6, 4)):
     """
     Creates a styled figure with one or more subplots.
     Returns (fig, axes) — axes is a single Axes if nrows==ncols==1,
@@ -88,9 +88,23 @@ def add_dataScatter(ax, x, y, error, label: str = None, colour: str = None):
         linewidth=marker_size - 1,
         zorder=1
     )
-
-
     return ax
+
+def save_figure(figure, name, log_description, style=STYLE):
+    """
+    save figure with the selected style write log entry 
+    figure: to be saved
+    name: name of save file of figure and log entry
+    log_description: 
+    style: 
+    """
+    dir_figures = "../figures"
+    figure_name =name if "." in name else f"{name}.png"
+    save_as=    os.path.join(dir_figures, figure_name)
+    with plt.rc_context(style):
+        figure.savefig(save_as)
+    keep_log(dir_figures, name, log_description)
+
 
 def plot_spectrum(
         name: str,
@@ -174,7 +188,7 @@ def plot_coincidence_delay(
 
 
 
-def interactive_spectra(df, name, description, x_col='bin', label_col='filename'):
+def interactive_spectra(df, name, description, y_col='counts', x_col='bin', label_col='filename'):
     """
     Plots all spectra in a combined DataFrame as separate traces.
     Each trace can be toggled on/off interactively.
@@ -192,16 +206,23 @@ def interactive_spectra(df, name, description, x_col='bin', label_col='filename'
 
     for label, group in df.groupby(label_col):
         trace_name = " | ".join(str(l) for l in label) if isinstance(label, tuple) else str(label)
+
         fig.add_trace(go.Scatter(
             x=group[x_col].to_numpy(),
-            y=group['counts'].to_numpy(),
-            mode='lines',
-            name=trace_name
+            y=group[y_col].to_numpy(),
+            mode='markers',
+            name=trace_name,
+            error_y=dict(
+                array=np.sqrt(group[y_col].to_numpy()),
+                visible=True,
+                thickness=1.5,
+                width=3,
+            )
         ))
 
     fig.update_layout(
         xaxis_title=x_col,
-        yaxis_title="Counts",
+        yaxis_title=y_col   ,
         legend=dict(itemclick="toggle", itemdoubleclick="toggleothers")
     )
 
@@ -215,23 +236,30 @@ def interactive_calibration(calibration_dataframe):
 
     Insentive is to find winodows for find gaussian fit parameters thus calibration data. 
     """
+    # by scintillator
+    df_cali_plastic= calibration_dataframe[calibration_dataframe["scintillator"]=="Plastic"]
+    df_cali_NaI= calibration_dataframe[calibration_dataframe["scintillator"]=="NaI(Ti)"]
+
+
     # names and log entries
     name_plastic = "cali_plastic_scinti"
     name_NaI = "cali_NaI_scinti"
-    log_plastic= "compare the calibration spectra, select windows, focus on data obtained on 04-15"
-    log_NaI= "compare the calibration spectra, select windows, focus on data obtained on 04-15"
+    log_plastic= "including errorbars. concidering rates. compare the calibration spectra, select windows, focus on data obtained on 04-16"
+    log_NaI= "including errorbars. considering rates. compare the calibration spectra, select windows, focus on data obtained on 04-16"
     # interactive plot
     interactive_spectra(
         df_cali_plastic, 
         name_plastic, 
         log_plastic, 
-        label_col="time_of_recording"
+        y_col= "rate",
+        label_col=["time_of_recording", "source"]
         )
     interactive_spectra(
         df_cali_NaI,
         name_NaI,
         log_NaI,
-        label_col="time_of_recording"
+        y_col= "rate",
+        label_col=["time_of_recording", "source"]
     )
 
 

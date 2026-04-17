@@ -129,6 +129,14 @@ def return_angle(data_dir, filename):
     index= open_log(directory)
     return index.get(data_dir, {}).get(filename, {}).get("angle", "unknown")
 
+def return_source(data_dir, filename):
+    """
+    # measured spectra of which source?
+    """
+    directory= "../data"
+    index= open_log(directory)
+    return index.get(data_dir, {}).get(filename, {}).get("source", "unknown")
+
 
 if __name__ == "__main__" and True:
     print(return_TOR("cali_spectra", "04-15-01-Na-NaI.TKA"))

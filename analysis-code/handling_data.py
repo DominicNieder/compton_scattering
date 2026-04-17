@@ -5,7 +5,7 @@ import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from utils import return_scinti, return_TOR, return_angle
+from utils import return_scinti, return_TOR, return_angle, return_source
 
 def load_spectrum(filepath):
     """
@@ -20,9 +20,11 @@ def load_spectrum(filepath):
     df = pd.read_csv(filepath, skiprows=2, header=None, names=['counts'])
     l =len(df)
     # add bin number
+    df['rate'] = df['counts']/measurement_time
     df['bin'] = range(l)
     # add measurement time
-    df['measurement_time']= measurement_time    
+    df['measurement_time']= measurement_time 
+
     if df.empty:
         print(f"Warning: {filepath} loaded but is empty")
     else:
@@ -62,6 +64,7 @@ def load_all_spectra(directory, section=None):
         print(f"dir: {directory}")
         df['angle'] = return_angle(section, filename)
         df['scintillator'] = return_scinti(section, filename)
+        df['source'] = return_source(section, filename)
         df['time_of_recording']= return_TOR(section, filename)
         df['filename'] = filename  # tag data with filename
         frames.append(df)
