@@ -460,7 +460,7 @@
             "angle": 0,
             "T": "",
             "source": "Cs137",
-            "description": "NaI at 0, plastic at 0"
+            "description": "NaI at 0, plastic at 0. The time seemed off by factor of 10."
         },
 
         "04-17-02-NaI-15.TKA": {
@@ -487,7 +487,7 @@
             "angle": -30,
             "T": 5746,
             "source": "Cs137",
-            "description": "Error, put plastic at 2theta. NaI at -30, plastic at -15"
+            "description": "NaI at -30, plastic at -15"
         },
 
         "04-17-03-Plastitic-30.TKA": {
@@ -505,7 +505,7 @@
             "angle": 30,
             "T": 5746,
             "source": "Cs137",
-            "description": "Error, put plastic at 2theta. NaI at 30, plastic at 15"
+            "description": "NaI at 30, plastic at 15"
         },
 
         "04-17-04-Plastitic-30.TKA": {
@@ -515,6 +515,24 @@
             "T": 5745,
             "source": "Cs137",
             "description": "NaI at 30, plastic at 15"
+        },
+
+        "04-17-05-NaI-60.TKA": {
+            "date, time": "2026-04-17, 18:20",
+            "scinti": "NaI(Ti)",
+            "angle": 60,
+            "T": 6078,
+            "source": "Cs137",
+            "description": "NaI at 60, plastic at 30"
+        },
+
+        "04-17-05-Plastitic-60.TKA": {
+            "date, time": "2026-04-17, 18:20",
+            "scinti": "Plastic",
+            "angle": 60,
+            "T": 6078,
+            "source": "Cs137",
+            "description": "NaI at 60, plastic at 30"
         }
     }
 }
